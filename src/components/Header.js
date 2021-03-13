@@ -32,7 +32,9 @@ const Header = () => (
         <StyledImg src={logo} alt="reddit" />
       </Link>
       <StyledUl>
-        <Link to="/search/javascript">Search</Link>
+        <StyledLi>
+          <Link to="/search/javascript">Search</Link>
+        </StyledLi>
         <StyledLi>
           <a href="#how-it-works">How it works</a>
         </StyledLi>
