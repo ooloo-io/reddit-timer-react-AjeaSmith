@@ -28,16 +28,16 @@ const StyledLi = styled.li`
 const Header = () => (
   <StyledHeader>
     <StyledNav>
-      <Link to='/'>
-        <StyledImg src={logo} alt='reddit' />
+      <Link to="/">
+        <StyledImg src={logo} alt="reddit" />
       </Link>
       <StyledUl>
-        <Link to='/search'>Search</Link>
+        <Link to="/search">Search</Link>
         <StyledLi>
-          <a href='#how-it-works'>How it works</a>
+          <a href="#how-it-works">How it works</a>
         </StyledLi>
         <StyledLi>
-          <a href='#about'>About</a>
+          <a href="#about">About</a>
         </StyledLi>
       </StyledUl>
     </StyledNav>
