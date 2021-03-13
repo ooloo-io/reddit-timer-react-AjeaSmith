@@ -20,7 +20,7 @@ const StyledUl = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
-  `;
+`;
 const StyledLi = styled.li`
   font-size: 16px;
   margin-right: 25px;
@@ -28,18 +28,16 @@ const StyledLi = styled.li`
 const Header = () => (
   <StyledHeader>
     <StyledNav>
-      <Link to="/">
-        <StyledImg src={logo} alt="reddit" />
+      <Link to='/'>
+        <StyledImg src={logo} alt='reddit' />
       </Link>
       <StyledUl>
+        <Link to='/search'>Search</Link>
         <StyledLi>
-          <Link to="/search">Search</Link>
+          <a href='#how-it-works'>How it works</a>
         </StyledLi>
         <StyledLi>
-          <a href="#how-it-works">How it works</a>
-        </StyledLi>
-        <StyledLi>
-          <a href="#about">About</a>
+          <a href='#about'>About</a>
         </StyledLi>
       </StyledUl>
     </StyledNav>
