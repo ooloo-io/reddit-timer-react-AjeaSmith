@@ -1,5 +1,5 @@
-@import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat:wght@400;500;600;700&display=swap");
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat:wght@400;500;600;700&display=swap');
 *,
 *::before,
 *::after {
@@ -8,7 +8,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F2F2F2;
 }
 a {
   text-decoration: none;
@@ -21,5 +22,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bitter", serif;
+  font-family: 'Bitter', serif;
 }
