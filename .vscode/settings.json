@@ -1,6 +1,4 @@
 {
     "editor.quickSuggestionsDelay": 5,
-    "emmet.showSuggestionsAsSnippets": true,
-    "prettier.singleQuote": true,
-    "prettier.jsxSingleQuote": true
+    "emmet.showSuggestionsAsSnippets": true
 }
