@@ -11,7 +11,7 @@ const Footer = () => (
       <Ul>
         <li>
           <Link to={{ pathname: 'https://ooloo.io/employers' }} target="_blank">
-            ooloo
+            ooloo.io
           </Link>
         </li>
         <li>
