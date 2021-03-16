@@ -10,7 +10,9 @@ const Footer = () => (
     <Nav>
       <Ul>
         <li>
-          <Link to="https://ooloo.io/employers">ooloo</Link>
+          <Link to={{ pathname: 'https://ooloo.io/employers' }} target="_blank">
+            ooloo
+          </Link>
         </li>
         <li>
           <Link to="/">
