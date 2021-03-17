@@ -9,7 +9,10 @@ const Hero = () => {
           Great timing, great results! Find the best time to post on your
           subreddit.
         </small>
+        <button>SHOW ME THE BEST TIME</button>
+        <small>r/javascript</small>
       </div>
+      <div className="hero-image"></div>
     </section>
   );
 };
