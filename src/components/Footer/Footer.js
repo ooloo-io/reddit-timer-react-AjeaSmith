@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../footerlogo.svg';
+import logo from '../../images/footerlogo.svg';
 import {
   Wrapper, Nav, Ul, Img,
 } from './Footer.style';

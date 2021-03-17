@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../redditlogo.svg';
+import logo from '../../images/redditlogo.svg';
 import {
   Wrapper, Nav, Ul, Li, Logo,
 } from './Header.style';
