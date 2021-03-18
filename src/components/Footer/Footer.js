@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../footerlogo.svg';
-import {
-  Wrapper, Ul, Img, Li,
-} from './Footer.style';
+import * as S from './Footer.style';
 
 const Footer = () => (
-  <Wrapper>
-    <Ul>
-      <Li>
+  <S.Wrapper>
+    <S.Ul>
+      <S.Li>
         <a
           href="https://ooloo.io/employers"
           target="_blank"
@@ -16,17 +14,17 @@ const Footer = () => (
         >
           ooloo.io
         </a>
-      </Li>
-      <Li>
+      </S.Li>
+      <S.Li>
         <Link to="/">
           <Img src={logo} alt="footer" />
         </Link>
-      </Li>
-      <Li>
+      </S.Li>
+      <S.Li>
         <Link to="/terms">Terms & Privacy</Link>
-      </Li>
-    </Ul>
-  </Wrapper>
+      </S.Li>
+    </S.Ul>
+  </S.Wrapper>
 );
 
 export default Footer;
