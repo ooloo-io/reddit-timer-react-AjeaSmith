@@ -24,7 +24,11 @@ describe('header links redirect to correct pages', () => {
     userEvent.click(logo);
     history.push('/');
 
-    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+    expect(
+      screen.screen.getByRole("heading", {
+        name: /No reactions to your reddit posts?/i,
+      })
+    ).toBeInTheDocument();
     expect(history.location.pathname).toEqual('/');
   });
 

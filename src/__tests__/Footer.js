@@ -33,6 +33,8 @@ describe('footer links redirect to correct pages', () => {
     history.push('/');
 
     expect(history.location.pathname).toEqual('/');
-    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /No reactions to your reddit posts?/i })
+    ).toBeInTheDocument();
   });
 });
