@@ -25,9 +25,9 @@ describe('header links redirect to correct pages', () => {
     history.push('/');
 
     expect(
-      screen.screen.getByRole("heading", {
+      screen.screen.getByRole('heading', {
         name: /No reactions to your reddit posts?/i,
-      })
+      }),
     ).toBeInTheDocument();
     expect(history.location.pathname).toEqual('/');
   });
