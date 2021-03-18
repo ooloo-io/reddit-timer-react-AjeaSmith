@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../images/footerlogo.svg';
-import {
-  Wrapper, Nav, Ul, Img,
-} from './Footer.style';
+import logo from '../../footerlogo.svg';
+import * as S from './Footer.style';
 
 const Footer = () => (
-  <Wrapper>
-    <Nav>
-      <Ul>
-        <li>
-          <Link to={{ pathname: 'https://ooloo.io/employers' }} target="_blank">
-            ooloo.io
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <Img src={logo} alt="footer" />
-          </Link>
-        </li>
-        <li>
-          <Link to="/terms">Terms & Privacy</Link>
-        </li>
-      </Ul>
-    </Nav>
-  </Wrapper>
+  <S.Wrapper>
+    <S.Ul>
+      <S.Li>
+        <a
+          href="https://ooloo.io/employers"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ooloo.io
+        </a>
+      </S.Li>
+      <S.Li>
+        <Link to="/">
+          <S.Img src={logo} alt="footer" />
+        </Link>
+      </S.Li>
+      <S.Li>
+        <Link to="/terms">Terms & Privacy</Link>
+      </S.Li>
+    </S.Ul>
+  </S.Wrapper>
 );
 
 export default Footer;
