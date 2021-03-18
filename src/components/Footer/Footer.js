@@ -17,7 +17,7 @@ const Footer = () => (
       </S.Li>
       <S.Li>
         <Link to="/">
-          <Img src={logo} alt="footer" />
+          <S.Img src={logo} alt="footer" />
         </Link>
       </S.Li>
       <S.Li>
