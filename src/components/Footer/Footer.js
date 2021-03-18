@@ -9,9 +9,13 @@ const Footer = () => (
   <Wrapper>
     <Ul>
       <Li>
-        <Link to={{ pathname: 'https://ooloo.io/employers' }} target="_blank">
+        <a
+          href="https://ooloo.io/employers"
+          target="_blank"
+          rel="noreferrer"
+        >
           ooloo.io
-        </Link>
+        </a>
       </Li>
       <Li>
         <Link to="/">
