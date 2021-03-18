@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-top: 32px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Nav = styled.nav`
+  width: 100%;
   display: flex;
+  padding-left:80px;
+  padding-right: 54px;
   justify-content: space-between;
   align-items: center;
 `;
@@ -24,5 +28,5 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   font-size: 16px;
-  margin-right: 25px;
+  margin-right: 26px;
 `;
