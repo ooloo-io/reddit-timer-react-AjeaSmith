@@ -22,8 +22,8 @@ const Hero = () => (
       </Link>
     </section>
     <S.Info>
-      <S.InfoContainer id="#how-it-works">
-        <S.InfoTitle>How it works</S.InfoTitle>
+      <S.InfoContainer>
+        <S.InfoTitle id="how-it-works">How it works</S.InfoTitle>
         <S.InfoContent>
           {' '}
           • We find the 500 top posts from the past year for a subreddit.
@@ -32,12 +32,11 @@ const Hero = () => (
           • The data is visualized in a heatmap grouped by weekday and
           hour of the day.
           <br />
-          • See immediately when to submit your reddit
-          post.
+          • See immediately when to submit your reddit post.
         </S.InfoContent>
       </S.InfoContainer>
-      <section id="#about">
-        <S.InfoTitle>About</S.InfoTitle>
+      <section>
+        <S.InfoTitle id="about">About</S.InfoTitle>
         <S.InfoContent>
           This app was created during a course on profy.dev with the goal to
           implement a pixel-perfect real-world application with professional
