@@ -18,7 +18,7 @@ const Hero = () => (
     </S.Content>
     <div className="hero-image">
       <Link to="/search/javascript">
-        <img src={heatmapPNG} alt="heatmap" srcSet="" />
+        <S.Image src={heatmapPNG} alt="heatmap" srcSet="" />
       </Link>
     </div>
     <div className="hero-info">
