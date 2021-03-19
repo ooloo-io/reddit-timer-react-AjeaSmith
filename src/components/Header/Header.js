@@ -1,28 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/redditlogo.svg';
-import {
-  Wrapper, Nav, Ul, Li, Logo,
-} from './Header.style';
+import * as S from './Header.style';
 
 const Header = () => (
-  <Wrapper>
-    <Nav>
+  <S.Wrapper>
+    <S.Nav>
       <Link to="/">
-        <Logo src={logo} alt="reddit" />
+        <S.Logo src={logo} alt="reddit" />
       </Link>
-      <Ul>
-        <Li>
+      <S.Ul>
+        <S.Li>
           <Link to="/search/javascript">Search</Link>
-        </Li>
-        <Li>
+        </S.Li>
+        <S.Li>
           <a href="#how-it-works">How it works</a>
-        </Li>
-        <Li>
+        </S.Li>
+        <S.Li>
           <a href="#about">About</a>
-        </Li>
-      </Ul>
-    </Nav>
-  </Wrapper>
+        </S.Li>
+      </S.Ul>
+    </S.Nav>
+  </S.Wrapper>
 );
 export default Header;

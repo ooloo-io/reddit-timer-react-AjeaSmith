@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heatmapPNG from '../../images/heatmap.png';
+import * as S from './Hero.style';
 
 const Hero = () => (
-  <section>
+  <S.Wrapper>
     <div className="hero-content">
       <h2>No reactions to your reddit posts?</h2>
       <small>
@@ -44,7 +45,7 @@ const Hero = () => (
         </p>
       </div>
     </div>
-  </section>
+  </S.Wrapper>
 );
 
 export default Hero;
