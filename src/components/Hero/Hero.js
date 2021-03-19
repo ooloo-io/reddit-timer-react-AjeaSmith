@@ -5,17 +5,17 @@ import * as S from './Hero.style';
 
 const Hero = () => (
   <S.Wrapper>
-    <div className="hero-content">
-      <h2>No reactions to your reddit posts?</h2>
-      <small>
+    <S.Content>
+      <S.Title>No reactions to your reddit posts?</S.Title>
+      <S.Subtitle>
         Great timing, great results! Find the best time to post on your
         subreddit.
-      </small>
-      <button type="button">
-        <Link to="/search/javascript">SHOW ME THE BEST TIME</Link>
-      </button>
-      <small>r/javascript</small>
-    </div>
+      </S.Subtitle>
+      <S.CTAButton type="button">
+        <S.Link href="/search/javascript">Show me the best time</S.Link>
+      </S.CTAButton>
+      <S.Small>r/javascript</S.Small>
+    </S.Content>
     <div className="hero-image">
       <Link to="/search/javascript">
         <img src={heatmapPNG} alt="heatmap" srcSet="" />
