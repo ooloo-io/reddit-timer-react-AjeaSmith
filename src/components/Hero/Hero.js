@@ -11,14 +11,14 @@ const Hero = () => (
         Great timing, great results! Find the best time to post on your
         subreddit.
       </S.Subtitle>
-      <S.CTAButton type="button">
-        <S.Link href="/search/javascript">Show me the best time</S.Link>
-      </S.CTAButton>
+      <Link to="/search/javascript">
+        <S.CTALink>Show me the best time</S.CTALink>
+      </Link>
       <S.Small>r/javascript</S.Small>
     </S.Content>
     <section>
       <Link to="/search/javascript">
-        <S.Image src={heatmapPNG} alt="heatmap" srcSet="" />
+        <S.Image src={heatmapPNG} alt="heatmap" />
       </Link>
     </section>
     <S.Info>

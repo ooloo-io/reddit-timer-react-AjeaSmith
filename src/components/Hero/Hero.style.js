@@ -34,20 +34,19 @@ export const Small = styled.small`
   text-align: center;
 `;
 
-export const CTAButton = styled.button`
+export const CTALink = styled.p`
+  font-size: 14px;
+  color: white;
   background: #fdb755;
-  text-align: center;
   text-transform: uppercase;
   border: none;
   outline: none;
   width: 217px;
   height: 36px;
   border-radius: 3px;
-`;
-
-export const Link = styled.a`
-  font-size: 14px;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Image = styled.img`

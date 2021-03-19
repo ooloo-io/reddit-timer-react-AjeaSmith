@@ -25,7 +25,7 @@ describe('header links redirect to correct pages', () => {
     history.push('/');
 
     expect(
-      screen.screen.getByRole('heading', {
+      screen.getByRole('heading', {
         name: /No reactions to your reddit posts?/i,
       }),
     ).toBeInTheDocument();
@@ -44,6 +44,5 @@ describe('header links redirect to correct pages', () => {
 
     expect(screen.getByText('Search page')).toBeInTheDocument();
     expect(history.location.pathname).toEqual('/search/javascript');
-    screen.debug();
   });
 });
