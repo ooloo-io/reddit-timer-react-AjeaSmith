@@ -50,8 +50,7 @@ export const CTALink = styled.p`
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  max-width: 1114px;
+  max-width: 100%;
 `;
 
 export const Info = styled.section`
