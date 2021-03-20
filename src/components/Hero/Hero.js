@@ -18,7 +18,11 @@ const Hero = () => (
     </S.Content>
     <section>
       <Link to="/search/javascript">
-        <S.Image src={heatmapPNG} alt="heatmap" />
+        <S.Image
+          src={heatmapPNG}
+          alt="heatmap"
+          srcSet="/heatmap.png, /heatmap@2x.png 2x, /heatmap@3x.png 3x"
+        />
       </Link>
     </section>
     <S.Info>

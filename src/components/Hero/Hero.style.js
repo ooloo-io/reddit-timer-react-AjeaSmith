@@ -10,7 +10,6 @@ export const Wrapper = styled.section`
 
 export const Title = styled.h2`
   margin-bottom: 15px;
-  font-size: 30px;
   text-align: center;
   font-weight: 400;
 `;
