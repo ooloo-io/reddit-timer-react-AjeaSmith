@@ -9,10 +9,12 @@ function App() {
   return (
     <Router>
       <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/search/javascript" component={SearchPage} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/search/javascript" component={SearchPage} />
+        </Switch>
+      </main>
       <Footer />
     </Router>
   );

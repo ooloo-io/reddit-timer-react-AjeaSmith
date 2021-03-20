@@ -5,7 +5,7 @@ import { createMemoryHistory } from 'history';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 
-const setup = (history = '/search/javascript') => {
+const setup = (history) => {
   render(
     <Router history={history}>
       <App />
@@ -15,7 +15,7 @@ const setup = (history = '/search/javascript') => {
 describe('footer links redirect to correct pages', () => {
   test('ooloo.io goes to https://ooloo.io/employers page', () => {
     const history = createMemoryHistory({
-      initialEntries: ['/'],
+      initialEntries: ['/search/javascript'],
     });
     setup(history);
     const footerlink = screen.getByRole('link', { name: 'ooloo.io' });
@@ -33,6 +33,8 @@ describe('footer links redirect to correct pages', () => {
     history.push('/');
 
     expect(history.location.pathname).toEqual('/');
-    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /No reactions to your reddit posts?/i }),
+    ).toBeInTheDocument();
   });
 });
