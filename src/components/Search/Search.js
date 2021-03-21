@@ -14,6 +14,7 @@ const Search = () => (
             placeholder="javascript"
           />
         </label>
+        <button type="submit">Search</button>
       </div>
     </form>
   </section>
