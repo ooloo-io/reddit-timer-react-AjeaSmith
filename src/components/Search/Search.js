@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import * as S from './Search.style';
+import React, { useState } from "react";
+import * as S from "./Search.style";
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const Search = ({ history }) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("javascript");
   const onInputChange = (event) => {
     setValue(event.target.value);
   };
