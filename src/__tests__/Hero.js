@@ -34,7 +34,9 @@ test('CTA button should redirect to search page ', () => {
   });
   setup(history);
 
-  expect(screen.getByText('Search page')).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /Find the best time for a subreddit/i }),
+  ).toBeInTheDocument();
   const logo = screen.getByRole('link', { name: 'reddit' });
 
   userEvent.click(logo);
@@ -48,5 +50,7 @@ test('CTA button should redirect to search page ', () => {
   });
 
   userEvent.click(CTAButton);
-  expect(screen.getByText('Search page')).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /Find the best time for a subreddit/i }),
+  ).toBeInTheDocument();
 });

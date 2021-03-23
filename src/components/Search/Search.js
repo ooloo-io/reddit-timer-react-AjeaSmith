@@ -3,7 +3,7 @@ import * as S from './Search.style';
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const Search = ({ history }) => {
-  const [value, setValue] = useState('javascript');
+  const [value, setValue] = useState('');
   const onInputChange = (event) => {
     setValue(event.target.value);
   };
