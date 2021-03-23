@@ -34,10 +34,10 @@ test('input value changes URL param', () => {
   const inputField = screen.getByRole('textbox', { name: 'r/' });
   const searchButton = screen.getByRole('button', { name: /Search/i });
 
-  userEvent.type(inputField, 'react');
-  expect(inputField).toHaveValue('react');
+  userEvent.type(inputField, 'reactjs');
+  expect(inputField).toHaveValue('reactjs');
 
   userEvent.click(searchButton);
-  history.push('/search/react');
-  expect(history.location.pathname).toEqual('/search/react');
+  history.push('/search/reactjs');
+  expect(history.location.pathname).toEqual('/search/reactjs');
 });
