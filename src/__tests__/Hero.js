@@ -23,7 +23,9 @@ test('Heat map image should redirect to search page', () => {
     screen.getByRole('heading', { name: /No reactions to your reddit posts?/i }),
   );
   userEvent.click(screen.getByRole('link', { name: 'heatmap' }));
-  expect(screen.getByText('Search page')).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /Find the best time for a subreddit/i }),
+  ).toBeInTheDocument();
 });
 
 test('CTA button should redirect to search page ', () => {
