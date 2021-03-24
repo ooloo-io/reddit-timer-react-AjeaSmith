@@ -19,23 +19,20 @@ const SubredditForm = () => {
     setSubreddit(initialSubreddit);
   }, [initialSubreddit]);
   return (
-    <S.Wrapper>
-      <h2>Find the best time for a subreddit</h2>
-      <S.Form onSubmit={onSubmit}>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <S.FormLabel htmlFor="reddit">
-          r/
-          <S.FormInput
-            value={subreddit}
-            id="reddit"
-            name="reddit"
-            type="text"
-            onChange={onInputChange}
-          />
-        </S.FormLabel>
-        <S.FormButton type="submit">Search</S.FormButton>
-      </S.Form>
-    </S.Wrapper>
+    <S.Form onSubmit={onSubmit}>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      <S.FormLabel htmlFor="reddit">
+        r/
+        <S.FormInput
+          value={subreddit}
+          id="reddit"
+          name="reddit"
+          type="text"
+          onChange={onInputChange}
+        />
+      </S.FormLabel>
+      <S.FormButton type="submit">Search</S.FormButton>
+    </S.Form>
   );
 };
 
