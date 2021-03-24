@@ -8,11 +8,10 @@ export const Wrapper = styled.section`
   padding: 0 16px;
 `;
 
-export const Title = styled.a`
+export const Title = styled.h2`
   margin-bottom: 15px;
   text-align: center;
   font-weight: 400;
-  font-size: 24px;
 `;
 
 export const Subtitle = styled.small`
@@ -65,7 +64,7 @@ export const InfoContainer = styled.div`
   margin-bottom: 105px;
 `;
 
-export const InfoTitle = styled.h3`
+export const InfoTitle = styled.a`
   margin-bottom: 12px;
   font-weight: 400;
 `;
