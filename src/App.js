@@ -12,7 +12,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/search/javascript" component={SearchPage} />
+          <Route path="/search/:subreddit" component={SearchPage} />
         </Switch>
       </main>
       <Footer />

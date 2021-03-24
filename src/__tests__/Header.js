@@ -42,7 +42,11 @@ describe('header links redirect to correct pages', () => {
     userEvent.click(search);
     history.push('/search/javascript');
 
-    expect(screen.getByText('Search page')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /Find the best time for a subreddit/i,
+      }),
+    ).toBeInTheDocument();
     expect(history.location.pathname).toEqual('/search/javascript');
   });
 });

@@ -42,10 +42,18 @@ const Hero = () => (
       <section>
         <S.InfoTitle id="about">About</S.InfoTitle>
         <S.InfoContent>
-          This app was created during a course on profy.dev with the goal to
-          implement a pixel-perfect real-world application with professional
-          workflows and tools like Kanban, ClickUp, Figma, GitHub, pull requests
-          and code reviews. Click here for more information.
+          This app was created during a course on
+          {' '}
+          <a href="https://ooloo.io">ooloo.io</a>
+          {' '}
+          with the goal to implement a
+          pixel-perfect real-world application with professional workflows and
+          tools like Kanban, ClickUp, Figma, GitHub, pull requests and code
+          reviews.
+          {' '}
+          <a href="https://ooloo.io/employers">
+            Click here for more information.
+          </a>
           {' '}
         </S.InfoContent>
       </section>

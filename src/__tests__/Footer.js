@@ -18,7 +18,7 @@ describe('footer links redirect to correct pages', () => {
       initialEntries: ['/search/javascript'],
     });
     setup(history);
-    const footerlink = screen.getByRole('link', { name: 'ooloo.io' });
+    const footerlink = screen.getByTestId('footerLink');
     userEvent.click(footerlink);
     expect(footerlink).toHaveAttribute('href', 'https://ooloo.io/employers');
   });

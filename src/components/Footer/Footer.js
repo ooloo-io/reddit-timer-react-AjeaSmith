@@ -11,6 +11,7 @@ const Footer = () => (
           href="https://ooloo.io/employers"
           target="_blank"
           rel="noreferrer"
+          data-testid="footerLink"
         >
           ooloo.io
         </a>
