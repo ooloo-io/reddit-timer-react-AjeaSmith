@@ -1,6 +1,7 @@
 import React from 'react';
 import SubredditForm from '../components/Search/SubredditForm';
 import * as S from '../components/Search/SubredditForm.style';
+
 /* eslint-disable react/prop-types */
 const SearchPage = () => (
   <S.Wrapper>
@@ -8,5 +9,4 @@ const SearchPage = () => (
     <SubredditForm />
   </S.Wrapper>
 );
-
 export default SearchPage;
