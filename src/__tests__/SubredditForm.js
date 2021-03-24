@@ -40,7 +40,7 @@ test("input value changes URL param", () => {
   expect(inputField).toHaveValue("reactjs");
 
   userEvent.click(searchButton);
-  
+
   history.push("/search/reactjs");
   expect(history.location.pathname).toEqual("/search/reactjs");
 });
