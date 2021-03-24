@@ -8,10 +8,11 @@ export const Wrapper = styled.section`
   padding: 0 16px;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.a`
   margin-bottom: 15px;
   text-align: center;
   font-weight: 400;
+  font-size: 24px;
 `;
 
 export const Subtitle = styled.small`

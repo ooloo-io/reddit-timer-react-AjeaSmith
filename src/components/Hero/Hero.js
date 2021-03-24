@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import heatmapPNG from '../../images/heatmap.png';
-import * as S from './Hero.style';
+import React from "react";
+import { Link } from "react-router-dom";
+import heatmapPNG from "../../images/heatmap.png";
+import * as S from "./Hero.style";
 
 const Hero = () => (
   <S.Wrapper>
@@ -27,26 +27,26 @@ const Hero = () => (
     </section>
     <S.Info>
       <S.InfoContainer>
-        <S.InfoTitle id="how-it-works">How it works</S.InfoTitle>
+        <S.InfoTitle id="how-it-works" href="https://ooloo.io/">
+          How it works
+        </S.InfoTitle>
         <S.InfoContent>
-          {' '}
+          {" "}
           • We find the 500 top posts from the past year for a subreddit.
-          <br />
-          {' '}
-          • The data is visualized in a heatmap grouped by weekday and
+          <br /> • The data is visualized in a heatmap grouped by weekday and
           hour of the day.
-          <br />
-          • See immediately when to submit your reddit post.
+          <br />• See immediately when to submit your reddit post.
         </S.InfoContent>
       </S.InfoContainer>
       <section>
-        <S.InfoTitle id="about">About</S.InfoTitle>
+        <S.InfoTitle id="about" href="https://ooloo.io/employers">
+          About
+        </S.InfoTitle>
         <S.InfoContent>
           This app was created during a course on profy.dev with the goal to
           implement a pixel-perfect real-world application with professional
           workflows and tools like Kanban, ClickUp, Figma, GitHub, pull requests
-          and code reviews. Click here for more information.
-          {' '}
+          and code reviews. Click here for more information.{" "}
         </S.InfoContent>
       </section>
     </S.Info>
