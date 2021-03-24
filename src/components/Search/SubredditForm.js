@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import * as S from "./Search.style";
+import React, { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import * as S from "./SubredditForm.style";
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-const Search = ({ history }) => {
-  const [value, setValue] = useState("javascript");
+const Search = () => {
+  const defaultSearch = match.params.reddit;
+  const [value, setValue] = useState("");
   const onInputChange = (event) => {
     setValue(event.target.value);
   };
@@ -11,6 +13,9 @@ const Search = ({ history }) => {
     e.preventDefault();
     history.push(`/search/${value}`);
   };
+  useEffect(() => {
+    setSubreddit(initialSubreddit);
+  }, [initialSubreddit]);
   return (
     <S.Wrapper>
       <h2>Find the best time for a subreddit</h2>
@@ -19,7 +24,7 @@ const Search = ({ history }) => {
         <S.FormLabel htmlFor="reddit">
           r/
           <S.FormInput
-            value={value}
+            value={value || defaultSearch}
             id="reddit"
             name="reddit"
             type="text"
