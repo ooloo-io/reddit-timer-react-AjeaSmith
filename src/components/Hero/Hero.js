@@ -27,7 +27,7 @@ const Hero = () => (
     </section>
     <S.Info>
       <S.InfoContainer>
-        <S.InfoTitle id="how-it-works" href="https://ooloo.io/">
+        <S.InfoTitle id="how-it-works">
           How it works
         </S.InfoTitle>
         <S.InfoContent>
@@ -42,14 +42,20 @@ const Hero = () => (
         </S.InfoContent>
       </S.InfoContainer>
       <section>
-        <S.InfoTitle id="about" href="https://ooloo.io/employers">
-          About
-        </S.InfoTitle>
+        <S.InfoTitle id="about">About</S.InfoTitle>
         <S.InfoContent>
-          This app was created during a course on profy.dev with the goal to
-          implement a pixel-perfect real-world application with professional
-          workflows and tools like Kanban, ClickUp, Figma, GitHub, pull requests
-          and code reviews. Click here for more information.
+          This app was created during a course on
+          {' '}
+          <a href="https://ooloo.io">profy.dev</a>
+          {' '}
+          with the goal to implement a
+          pixel-perfect real-world application with professional workflows and
+          tools like Kanban, ClickUp, Figma, GitHub, pull requests and code
+          reviews.
+          {' '}
+          <a href="https://ooloo.io/employers">
+            Click here for more information.
+          </a>
           {' '}
         </S.InfoContent>
       </section>

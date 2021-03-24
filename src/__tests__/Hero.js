@@ -54,5 +54,4 @@ test('CTA button should redirect to search page ', () => {
   expect(
     screen.getByRole('heading', { name: /Find the best time for a subreddit/i }),
   ).toBeInTheDocument();
-  screen.debug();
 });

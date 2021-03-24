@@ -64,7 +64,7 @@ export const InfoContainer = styled.div`
   margin-bottom: 105px;
 `;
 
-export const InfoTitle = styled.a`
+export const InfoTitle = styled.h3`
   margin-bottom: 12px;
   font-weight: 400;
 `;
