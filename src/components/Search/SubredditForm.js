@@ -3,21 +3,21 @@ import { useHistory, useParams } from 'react-router-dom';
 import * as S from './SubredditForm.style';
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-const Search = () => {
+const SubredditForm = () => {
+  const { subreddit: initialSubreddit } = useParams();
+  const [subreddit, setSubreddit] = useState(initialSubreddit);
+
   const history = useHistory();
-  const params = useParams();
-  console.log(history, params);
-  const [value, setValue] = useState('');
   const onInputChange = (event) => {
-    setValue(event.target.value);
+    setSubreddit(event.target.value);
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    history.push(`/search/${value}`);
+    history.push(`/search/${subreddit}`);
   };
   useEffect(() => {
-    // setSubreddit(initialSubreddit);
-  }, []);
+    setSubreddit(initialSubreddit);
+  }, [initialSubreddit]);
   return (
     <S.Wrapper>
       <h2>Find the best time for a subreddit</h2>
@@ -26,7 +26,7 @@ const Search = () => {
         <S.FormLabel htmlFor="reddit">
           r/
           <S.FormInput
-            value={value}
+            value={subreddit}
             id="reddit"
             name="reddit"
             type="text"
@@ -39,4 +39,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SubredditForm;
