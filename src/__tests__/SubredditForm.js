@@ -37,7 +37,6 @@ test("input value changes URL param", () => {
 
   userEvent.clear(inputField);
   userEvent.type(inputField, "reactjs");
-  expect(inputField).toHaveValue("reactjs");
 
   userEvent.click(searchButton);
 
