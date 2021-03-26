@@ -17,6 +17,7 @@ const SubredditForm = () => {
   };
   useEffect(() => {
     setSubreddit(initialSubreddit);
+    
   }, [initialSubreddit]);
   return (
     <S.Form onSubmit={onSubmit}>
