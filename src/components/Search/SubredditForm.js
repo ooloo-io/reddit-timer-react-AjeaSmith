@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import axios from 'axios';
 import * as S from './SubredditForm.style';
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const SubredditForm = () => {
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit);
+  const [posts, setPosts] = useState([]);
 
   const history = useHistory();
   const onInputChange = (event) => {
@@ -17,8 +19,15 @@ const SubredditForm = () => {
   };
   useEffect(() => {
     setSubreddit(initialSubreddit);
-    
-  }, [initialSubreddit]);
+    async function fetchResults() {
+      const response = await axios.get(
+        `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=100`,
+      );
+      setPosts(response.data);
+    }
+    fetchResults();
+  }, [initialSubreddit, subreddit]);
+  console.log(posts);
   return (
     <S.Form onSubmit={onSubmit}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
