@@ -1,6 +1,5 @@
 import React from 'react';
 import SubredditForm from '../components/Search/SubredditForm';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import * as S from '../components/Search/SubredditForm.style';
 
 /* eslint-disable react/prop-types */
