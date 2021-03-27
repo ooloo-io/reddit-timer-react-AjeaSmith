@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import axios from 'axios';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import Loader from 'react-loader-spinner';
 import * as S from './SubredditForm.style';
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -10,18 +8,17 @@ const SubredditForm = () => {
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit);
 
-  const history = useHistory();
   const onInputChange = (event) => {
     setSubreddit(event.target.value);
   };
+  const history = useHistory();
   const onSubmit = (e) => {
     e.preventDefault();
     history.push(`/search/${subreddit}`);
   };
   useEffect(() => {
     setSubreddit(initialSubreddit);
-    fetchSubreddits();
-  }, [initialSubreddit, subreddit, fetchSubreddits]);
+  }, [initialSubreddit]);
   return (
     <>
       <S.Form onSubmit={onSubmit}>
@@ -38,9 +35,6 @@ const SubredditForm = () => {
         </S.FormLabel>
         <S.FormButton type="submit">Search</S.FormButton>
       </S.Form>
-      {posts.length === 0 ? (
-        <Loader type="TailSpin" color="#fdb755" height={70} width={70} />
-      ) : null}
     </>
   );
 };
