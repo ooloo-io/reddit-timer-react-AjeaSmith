@@ -9,14 +9,6 @@ import * as S from './SubredditForm.style';
 const SubredditForm = () => {
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit);
-  const [posts, setPosts] = useState([]);
-
-  const fetchSubreddits = useCallback(async () => {
-    const response = await axios.get(
-      `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=100`,
-    );
-    setPosts(response.data);
-  }, [subreddit]);
 
   const history = useHistory();
   const onInputChange = (event) => {
@@ -25,7 +17,6 @@ const SubredditForm = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     history.push(`/search/${subreddit}`);
-    fetchSubreddits();
   };
   useEffect(() => {
     setSubreddit(initialSubreddit);
