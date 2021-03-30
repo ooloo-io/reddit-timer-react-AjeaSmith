@@ -5,23 +5,21 @@ import SubredditForm from '../components/Search/SubredditForm';
 import useFetchPosts from '../hooks/useFetchPosts';
 import * as S from '../components/Search/SubredditForm.style';
 
-/* eslint-disable react/prop-types */
 const SearchPage = () => {
   const { subreddit } = useParams();
-  console.log(subreddit);
   const { isLoading, hasError, posts } = useFetchPosts(subreddit);
-  console.log(posts);
   return (
     <S.Wrapper>
       <h2>Find the best time for a subreddit</h2>
       <SubredditForm />
-
       {isLoading ? (
-        <Loader type="TailSpin" color="#fdb755" height={70} width={70} />
+        <span data-testid="loading">
+          <Loader type="TailSpin" color="#fdb755" height={70} width={70} />
+        </span>
       ) : (
         <div>{posts.length}</div>
       )}
-      {hasError ? <p>{hasError}</p> : null}
+      {hasError ? <p>Something went wrong</p> : null}
     </S.Wrapper>
   );
 };

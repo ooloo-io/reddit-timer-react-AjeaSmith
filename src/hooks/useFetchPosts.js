@@ -34,12 +34,10 @@ const useFetchPosts = (subreddit) => {
 
   useEffect(() => {
     setStatus('pending');
-    console.log('called');
     fetchPaginatedPosts(subreddit)
       .then((result) => {
         setPosts(result);
         setStatus('resolved');
-        console.log(result);
       })
       .catch(() => {
         setStatus('rejected');

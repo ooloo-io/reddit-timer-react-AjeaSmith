@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import * as S from './SubredditForm.style';
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/label-has-associated-control */
+
 const SubredditForm = () => {
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit);
@@ -22,12 +21,10 @@ const SubredditForm = () => {
   return (
     <>
       <S.Form onSubmit={onSubmit}>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <S.FormLabel htmlFor="reddit">
+        <S.FormLabel>
           r/
           <S.FormInput
             value={subreddit}
-            id="reddit"
             name="reddit"
             type="text"
             onChange={onInputChange}
