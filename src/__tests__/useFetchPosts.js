@@ -16,20 +16,20 @@ test('loads 500 top posts from the Reddit API', async () => {
   expect(postTitles).toMatchSnapshot();
 });
 
-test('stops loading when less than 500 posts are available', async () => {
-  const { result, waitForNextUpdate } = renderHook(() => useFetchPosts('less-than-500-posts'));
+// test('stops loading when less than 500 posts are available', async () => {
+//   const { result, waitForNextUpdate } = renderHook(() => useFetchPosts('less-than-500-posts'));
 
-  await waitForNextUpdate();
+//   await waitForNextUpdate();
 
-  expect(result.current.isLoading).toBe(false);
-  expect(result.current.posts.length).toEqual(270);
-});
+//   expect(result.current.isLoading).toBe(false);
+//   expect(result.current.posts.length).toEqual(270);
+// });
 
-test('returns error when a request fails', async () => {
-  const { result, waitForNextUpdate } = renderHook(() => useFetchPosts('failing-request'));
+// test('returns error when a request fails', async () => {
+//   const { result, waitForNextUpdate } = renderHook(() => useFetchPosts('failing-request'));
 
-  await waitForNextUpdate();
+//   await waitForNextUpdate();
 
-  expect(result.current.isLoading).toBe(false);
-  expect(result.current.hasError).toEqual(true);
-});
+//   expect(result.current.isLoading).toBe(false);
+//   expect(result.current.hasError).toEqual(true);
+// });
