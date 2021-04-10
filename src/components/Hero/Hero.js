@@ -39,7 +39,7 @@ const Hero = () => (
           • See immediately when to submit your reddit post.
         </S.InfoContent>
       </S.InfoContainer>
-      <section>
+      <S.InfoContainer>
         <S.InfoTitle id="about">About</S.InfoTitle>
         <S.InfoContent>
           This app was created during a course on
@@ -56,7 +56,7 @@ const Hero = () => (
           </a>
           {' '}
         </S.InfoContent>
-      </section>
+      </S.InfoContainer>
     </S.Info>
   </S.Wrapper>
 );

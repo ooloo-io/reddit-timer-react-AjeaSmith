@@ -8,8 +8,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #F2F2F2;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2;
 }
 a {
   text-decoration: none;
@@ -22,5 +22,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
+}
+p {
+  color: #93918f;
 }

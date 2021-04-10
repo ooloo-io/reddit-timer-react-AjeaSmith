@@ -40,7 +40,7 @@ export const CTALink = styled.p`
   text-transform: uppercase;
   border: none;
   outline: none;
-  width: 217px;
+  padding: 0 12px;
   height: 36px;
   border-radius: 3px;
   display: flex;
@@ -72,5 +72,4 @@ export const InfoTitle = styled.h3`
 export const InfoContent = styled.p`
   font-size: 16px;
   line-height: 27px;
-  color: #93918f;
 `;
