@@ -19,12 +19,12 @@ export async function fetchPaginatedPosts(
   const allPosts = previousPosts.concat(data.data.children);
 
   // TODO: Find min and max limit of posts
-  const lessThan100Posts = data && data.dist < 100;
+  const lessThan100Posts = data && data.data.dist < 100;
   const moreThan500Posts = allPosts.length >= 500;
 
   // TODO: if too less or too high return posts (stop condition for recursion)
   if (lessThan100Posts || moreThan500Posts) return allPosts;
-  return fetchPaginatedPosts(subreddit, allPosts, data.after);
+  return fetchPaginatedPosts(subreddit, allPosts, data.data.after);
 }
 
 // custom useFetchPosts hook
@@ -36,6 +36,7 @@ const useFetchPosts = (subreddit) => {
     setStatus('pending');
     fetchPaginatedPosts(subreddit)
       .then((result) => {
+        console.log(result);
         setPosts(result);
         setStatus('resolved');
       })
